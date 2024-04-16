@@ -2,10 +2,19 @@ version: 2
 sources:
   - name: raw
     schema: gz_raw_data
+    description: greenweez raw data
     tables:
       - name: sales
         identifier: raw_gz_sales
       - name: product
         identifier: raw_gz_product
+        tests:
+          - unique:
+              column_name: products_id
       - name: ship
         identifier: raw_gz_ship
+        tests:
+          - unique:
+              column_name: orders_id
+
+              documantation: I've tried a whole range of things here and this is a little bit frustrating! 
