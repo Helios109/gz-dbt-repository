@@ -18,34 +18,4 @@ sources:
           - unique:
               column_name: orders_id
 
-models:
-  - name: finance_days
-    description: "Model to calculate finance metrics per day"
-    columns:
-      - name: date_date
-        description: "Date of the transactions"
-        tests:
-          - name: not_null
-      - name: nb_transactions
-        description: "Number of transactions on the date"
-        tests:
-          - name: not_null
-      - name: revenue
-        description: "Total revenue on the date"
-        tests:
-          - name: not_null
-      - name: average_basket
-        description: "Average basket value on the date"
-        tests:
-          - name: not_null
-      - name: margin
-        description: "Total margin on the date"
-        tests:
-          - name: not_null
-      - name: operational_margin
-        description: "Total operational margin on the date"
-        tests:
-          - name: not_null
-    materialized: table
-    unique_key: date_date
-    sql: "{{ config(seeds.model_finance_days) }}"
+
