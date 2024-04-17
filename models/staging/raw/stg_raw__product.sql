@@ -18,6 +18,6 @@ renamed as (
 
 select * from renamed
 
-description: Primary Key [products_id] Test
+
 
 

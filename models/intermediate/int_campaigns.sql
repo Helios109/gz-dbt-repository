@@ -1,4 +1,3 @@
--- Union all distinct data from different staging models
 select distinct
     date_date, paid_source, campaign_key, campaign_name, ads_cost, impression, click
 from
@@ -8,38 +7,38 @@ from
             paid_source,
             campaign_key,
             campaign_name,
-            ads_cost,
+            cast(ads_cost as float64) as ads_cost,  -- Ensure consistent data type
             impression,
             click
-        from `da-heledd-1633.gz_raw_data.raw_gz_facebook`
+        from {{ ref("stg_raw__facebook") }}
         union all
         select
             date_date,
             paid_source,
             campaign_key,
             campaign_name,
-            ads_cost,
+            cast(ads_cost as float64) as ads_cost,  -- Ensure consistent data type
             impression,
             click
-        from `da-heledd-1633.gz_raw_data.raw_gz_criteo`
+        from {{ ref("stg_raw__criteo") }}
         union all
         select
             date_date,
             paid_source,
             campaign_key,
             campaign_name,
-            ads_cost,
+            cast(ads_cost as float64) as ads_cost,  -- Ensure consistent data type
             impression,
             click
-        from `da-heledd-1633.gz_raw_data.raw_gz_bing`
+        from {{ ref("stg_raw__bing") }}
         union all
         select
             date_date,
             paid_source,
             campaign_key,
             campaign_name,
-            ads_cost,
+            cast(ads_cost as float64) as ads_cost,  -- Ensure consistent data type
             impression,
             click
-        from `da-heledd-1633.gz_raw_data.raw_gz_adwords`
+        from {{ ref("stg_raw__adwords") }}
     ) as combined_data
