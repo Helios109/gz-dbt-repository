@@ -12,4 +12,4 @@ renamed as (
 
 select * from renamed
 
-description: Primary Key orders_id
+
