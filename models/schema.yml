@@ -17,3 +17,14 @@ sources:
         tests:
           - unique:
               column_name: orders_id
+      - name: adwords # Add adwords table
+        identifier: raw_gz_adwords
+      - name: bing # Add bing table
+        identifier: raw_gz_bing
+      - name: criteo # Add criteo table
+        identifier: raw_gz_criteo
+      - name: facebook # Add facebook table
+        identifier: raw_gz_facebook
+        tests:
+          - unique:
+              
