@@ -7,7 +7,7 @@ from
             date_date,
             paid_source,
             campaign_key,
-            campaign_name,
+            campaign_name,  -- Use the same alias here
             ads_cost,
             impression,
             click
@@ -17,7 +17,7 @@ from
             date_date,
             paid_source,
             campaign_key,
-            campaign_name,
+            campaign_name,  -- Use the same alias here
             ads_cost,
             impression,
             click
@@ -27,7 +27,7 @@ from
             date_date,
             paid_source,
             campaign_key,
-            campaign_name,
+            campaign_name,  -- Use the same alias here
             ads_cost,
             impression,
             click
@@ -37,7 +37,7 @@ from
             date_date,
             paid_source,
             campaign_key,
-            campaign_name,
+            campaign_name,  -- Use the same alias here
             ads_cost,
             impression,
             click
