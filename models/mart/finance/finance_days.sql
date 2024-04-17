@@ -1,4 +1,5 @@
--- File: finance_days.sql
+-- Materialization: table
+-- Schedule: 0 8 * * * (UTC)
 -- Define a CTE to calculate the total revenue and margin per order
 with
     order_metrics as (
