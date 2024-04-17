@@ -17,5 +17,3 @@ sources:
         tests:
           - unique:
               column_name: orders_id
-
-
