@@ -25,6 +25,5 @@ sources:
         identifier: raw_gz_criteo
       - name: facebook # Add facebook table
         identifier: raw_gz_facebook
-        tests:
-          - unique:
+       
               
